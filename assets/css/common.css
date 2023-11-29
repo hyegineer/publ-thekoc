@@ -1,0 +1,41 @@
+html,
+body {
+  background-color: #f8f8f8;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.none {
+  display: none;
+}
+
+.mb-show {
+  display: none;
+}
+
+@media all and (max-width: 600px) {
+  .mb-show {
+    display: block;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F44336;
+  border-radius: 16px;
+  border: 4px solid transparent;
+}
+
+.color-txt {
+  color: #F44336;
+}

@@ -1,0 +1,259 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  opacity: 0;
+  pointer-events: none;
+
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.modal-wrapper:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  height: 100%;
+  margin-right: -4px;
+}
+
+.modal-wrapper.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.custom-modal-container {
+  display: inline-block;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  z-index: 1;
+  position: relative;
+  margin: 30px 0;
+  vertical-align: middle;
+  z-index: 20;
+  transform: translateY(60px);
+  transition: all 0.3s;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.modal-wrapper.show .custom-modal-container {
+  transform: translateY(0);
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+}
+
+.custom-modal {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.modal-sidebar {
+  width: 295px;
+  flex-shrink: 0;
+  border-right: 1px solid #ECF3F5;
+  padding: 36px 31px;
+}
+
+.modal-sidebar-contt-container {
+  width: 100%;
+}
+
+.modal-sidebar .top-ttl-wrap {
+  text-align: left;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.modal-sidebar .top-ttl-wrap img {
+  width: 50px;
+  position: absolute;
+  bottom: -7px;
+  right: -4px;
+}
+
+.modal-sidebar .top-ttl-wrap .ttl {
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.15px;
+  line-height: 1.4;
+}
+
+.modal-sidebar .top-ttl-wrap .color-txt {
+  font-weight: 600;
+}
+
+.bottom-menu-wrap {
+  text-align: left;
+  position: sticky;
+  top: 30px;
+}
+
+.menu-list {
+  color: #BFBFBF;
+  font-weight: 500;
+  margin-bottom: 24px;
+  letter-spacing: -0.15px;
+  cursor: pointer;
+}
+
+.menu-list-txt:hover,
+.sub-menu-list:hover {
+  color: #a6a5a5;
+}
+
+.menu-list:last-child {
+  margin-bottom: 0;
+}
+
+.menu-list .txt,
+.sub-menu-list {
+  color: inherit;
+}
+
+.menu-list.active {
+  font-weight: 600;
+  color: #333;
+}
+
+.menu-list.active .menu-list-txt {
+  color: #F44336;
+}
+
+.menu-list.active .menu-list-txt:hover {
+  color: #dd392d;
+}
+
+.menu-list.active .menu-list-txt .num {
+  display: none;
+}
+
+.menu-list.active .menu-list-txt .ico-smile {
+  display: block;
+}
+
+.menu-list.active .sub-menu-list:before {
+  background-color: #333;
+}
+
+.menu-list.active .sub-menu-list:hover {
+  color: black;
+}
+
+.menu-list-txt {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: inherit;
+  margin-bottom: 14px;
+}
+
+.menu-list-txt .ico-smile {
+  display: none;
+  margin-right: 4px;
+  margin-left: -2px;
+}
+
+.menu-list-txt .num {
+  width: 17px;
+  height: 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #BFBFBF;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.sub-menu-list-grp {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-left: 26px;
+}
+
+.sub-menu-list {
+  position: relative;
+  font-size: 90%;
+  padding-left: 10px;
+}
+
+.sub-menu-list:before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #bfbfbf;
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+.modal-contt {
+  padding: 0 30px;
+}
+
+.contt-wrapper {
+  border-bottom: 1px solid #ECF3F5;
+}
+
+.contt-btn-wrapper {
+  padding: 45px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contt-btn-wrapper .btn {
+  width: 100%;
+  max-width: 200px;
+}
+
+.modal-sidebar-contt {
+  display: none;
+}
+
+.modal-sidebar-contt.active {
+  display: block;
+}
+
+.contt-wrapper .top-wrap {
+  padding-top: 30px;
+}

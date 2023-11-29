@@ -1,0 +1,205 @@
+.picture-container .img {
+  width: 100%;
+}
+
+#minihome-contt .description-container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.picture-container .img.img-minihome01 {
+  max-width: 350px;
+}
+
+.picture-container .img.img-minihome02 {
+  max-width: 250px;
+}
+
+.picture-container .img.img-minihome03 {
+  max-width: 350px;
+}
+
+.picture-container .img.img-minihome04 {
+  max-width: 246px;
+}
+
+#buy-inner-contt .description-container {
+  width: 100%;
+  max-width: 395px;
+}
+
+.picture-container .img.img-benefit01-01 {
+  max-width: 420px;
+}
+
+.picture-container .img.img-benefit01-02 {
+  max-width: 250px;
+}
+
+.picture-container .img.img-benefit01-03 {
+  max-width: 290px;
+}
+
+#sell-inner-contt .description-container {
+  width: 100%;
+  max-width: 390px;
+}
+
+.picture-container .img.img-benefit02-01 {
+  max-width: 380px;
+}
+
+.picture-container .img.img-benefit02-02 {
+  max-width: 440px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+.picture-container .img.img-benefit02-03 {
+  max-width: 300px;
+  margin-left: 10px;
+}
+
+#myproduct-inner-contt .description-container {
+  width: 100%;
+  max-width: 395px;
+}
+
+.picture-container .img.img-benefit03-01 {
+  max-width: 260px;
+}
+
+.picture-container .img.img-benefit03-02 {
+  max-width: 260px;
+}
+
+.picture-container .img.img-benefit03-03 {
+  max-width: 250px;
+}
+
+#social-contt .description-container {
+  width: 100%;
+  max-width: 410px;
+}
+
+.picture-container .img.img-social-blog01 {
+  max-width: 340px;
+}
+
+.picture-container .img.img-social-blog02 {
+  max-width: 420px;
+}
+
+.picture-container .img.img-social-blog03 {
+  max-width: 426px;
+}
+
+.picture-container .img.img-social-blog04 {
+  max-width: 300px;
+}
+
+.picture-container .img.img-social-youtube01 {
+  max-width: 340px;
+}
+
+.picture-container .img.img-social-youtube02 {
+  max-width: 420px;
+  margin-left: 10px;
+}
+
+.picture-container .img.img-social-youtube03 {
+  max-width: 300px;
+}
+
+.picture-container .img.img-social-tiktok01 {
+  max-width: 340px;
+}
+
+.picture-container .img.img-social-tiktok02 {
+  max-width: 420px;
+  margin-left: 10px;
+}
+
+.picture-container .img.img-social-insta01 {
+  max-width: 340px;
+}
+
+.picture-container .img.img-social-insta02 {
+  max-width: 420px;
+  margin-left: 10px;
+}
+
+.picture-container .img.img-social-insta03 {
+  max-width: 300px;
+}
+
+#event-contt .description-container {
+  width: 100%;
+  max-width: 330px;
+}
+
+.picture-container .img.img-event02 {
+  max-width: 460px;
+}
+
+/* 1126 신규 */
+#store-apply-contt .description-container {
+  width: 100%;
+  max-width: 380px;
+}
+
+.picture-container .img.img-sapply01,
+.picture-container .img.img-sapply02 {
+  max-width: 320px;
+}
+
+#store-approve-contt .description-container {
+  width: 100%;
+  max-width: 380px;
+}
+
+.picture-container .img.img-sapprove01 {
+  max-width: 410px;
+}
+
+.picture-container .img.img-sapprove02 {
+  max-width: 360px;
+  margin-left: 35px;
+}
+
+#store-enroll-contt .description-container {
+  width: 100%;
+  max-width: 370px;
+}
+
+.picture-container .img.img-senroll01 {
+  max-width: 430px;
+}
+
+.picture-container .img.img-senroll02 {
+  max-width: 460px;
+  margin-left: 5px;
+}
+
+#store-minihome-contt .description-container {
+  width: 100%;
+  max-width: 396px;
+}
+
+.picture-container .img.img-sminihome01 {
+  max-width: 320px;
+}
+
+.picture-container .img.img-sminihome02 {
+  max-width: 260px;
+}
+
+.picture-container .img.img-sminihome03 {
+  max-width: 320px;
+  margin-left: 10px;
+}
+
+.picture-container .img.img-sminihome04 {
+  max-width: 320px;
+  margin-left: 10px;
+}

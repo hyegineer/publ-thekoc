@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>더콕 사용가이드 팝업</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <link rel="stylesheet" href="assets/css/vendor/reset.css">
+  <link rel="stylesheet" href="assets/css/ui.css">
+
+  <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button type="button" onclick="openGuidePopup('thekoc-guide-modal')">더콕 멤버스 가이드 팝업 열기</button>
+    <button type="button" onclick="openStoreGuidePopup('thekoc-store-guide-modal')">더콕 입점사 가이드 팝업 열기</button>
+
+    <!-- 팝업 세트 -->
+    <div id="thekoc-guide-modal" class="modal-wrapper">
+      <div class="custom-modal-container">
+        <div class="custom-modal">
+          <div class="modal-sidebar">
+            <div class="top-ttl-wrap">
+              <h2 class="ttl">신규 회원을 위한 <br><span class="color-txt">더콕멤버스 사용백서</span></h2>
+              <img src="assets/images/character03.gif" alt="">
+            </div>
+
+            <div class="bottom-menu-wrap">
+              <ul class="menu-list-grp">
+                <!-- 미니홈 완성하기 -->
+                <li data-contt="minihome-contt" onclick="goStep('minihome-contt')" class="menu-list active">
+                  <div class="menu-list-txt">
+                    <img src="assets/images/ico-smile.svg" alt="" class="ico-smile">
+                    <span class="num">1</span>
+                    <span class="txt">미니홈 완성하기</span>
+                  </div>
+                  <ul class="sub-menu-list-grp">
+                    <li class="sub-menu-list">프로필 변경</li>
+                    <li class="sub-menu-list">추가정보입력</li>
+                  </ul>
+                </li>
+                <!-- 멤버스 혜택받기 -->
+                <li data-contt="benefit-contt" onclick="goStep('benefit-contt')" class="menu-list">
+                  <div class="menu-list-txt">
+                    <img src="assets/images/ico-smile.svg" alt="" class="ico-smile">
+                    <span class="num">2</span>
+                    <span class="txt">멤버스 혜택받기</span>
+                  </div>
+                  <ul class="sub-menu-list-grp">
+                    <li class="sub-menu-list" onclick="goBenefitInnerContt('buy-inner-contt')">더콕 구매하기</li>
+                    <li class="sub-menu-list" onclick="goBenefitInnerContt('sell-inner-contt')">더콕 판매하기</li>
+                    <li class="sub-menu-list" onclick="goBenefitInnerContt('myproduct-inner-contt')">내 상품 판매하기</li>
+                  </ul>
+                </li>
+                <!-- 소셜셀링 신청하기 -->
+                <li data-contt="social-contt" onclick="goStep('social-contt')" class="menu-list">
+                  <div class="menu-list-txt">
+                    <img src="assets/images/ico-smile.svg" alt="" class="ico-smile">
+                    <span class="num">3</span>
+                    <span class="txt">소셜셀링 신청하기</span>
+                  </div>
+                </li>
+                <!-- 이벤트 참여하기 -->
+                <li data-contt="event-contt" onclick="goStep('event-contt')" class="menu-list">
+                  <div class="menu-list-txt">
+                    <img src="assets/images/ico-smile.svg" alt="" class="ico-smile">
+                    <span class="num">4</span>
+                    <span class="txt">이벤트 참여하기</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-sidebar-contt-container">
+            <!-- 1. 미니홈 완성하기 컨텐츠 -->
+            <div id="minihome-contt" class="modal-sidebar-contt active">
+              <div class="modal-contt">
+                <!-- 내용 -->
+                <div class="contt-wrapper">
+                  <div class="top-wrap">
+                    <h2 class="top-ttl">
+                      <b>마이 더콕멤버스</b>를 <br>순서대로 함께 완성해봐요!
+                    </h2>
+
+                    <figure class="top-figure-wrap">
+                      <video id="video01" src="assets/images/video01.mp4" loop muted playsinline data-keeping></video>
+                    </figure>
+                  </div>
+
+                  <div class="bottom-wrap">
+                    <!-- 1-1. 프로필 이미지를 변경 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num red">1</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">새로운 모습을 공유해보세요!</span>
+                          </h4>
+                          <p class="desc">
+                            멤버스 프로필 수정 버튼 클릭 > 미니홈피 관리 > 이미지 수정에서,<br>나만의 사진을 업로드하고 개성을 뽐내보세요.
+                          </p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            회원님의 <span class="color-txt">예쁘고 멋있는 얼굴을 보여주세요!</span>
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-minihome01.png" alt="" class="img img-minihome01">
+                      </div>
+                    </div>
+
+                    <!-- 1-2. 더콕 멤버스 이름 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num mint">2</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">더콕멤버스 이름을 넣어주세요.</span>
+                          </h4>
+                          <p class="desc">
+                            멤버스 프로필 수정 버튼을 클릭 > 미니홈피 관리 > <br>멤버스 타이틀, 상점명, 그리고 나를 표현하는 소개를 넣어주세요!
+                          </p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            마지막에 <span class="color-txt">저장버튼</span>을 누르는걸 잊지마세요!
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-minihome02.png" alt="" class="img img-minihome02">
+                      </div>
+                    </div>
+
+                    <!-- 1-3. 활동하는 미디어 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num ylw">3</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">활동하는 미디어를 연결해주세요.</span>
+                          </h4>
+                          <p class="desc">틱톡, 블로그, 페이스북, 웨이보 등 활동하는 <br>
+                            미디어를 연결하여 나를 소개해보세요.</p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            <span class="color-txt">id</span>만 넣어서 쉽게 등록하세요!
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-minihome03.png" alt="" class="img img-minihome03">
+                      </div>
+                    </div>
+
+                    <!-- 1-4. 탭 추가 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num black">4</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">탭을 추가해보세요.</span>
+                          </h4>
+                          <p class="desc">링크, 상품, 일정, 텍스트, 이미지, 동영상까지 <br>넣고싶은 모든 기능을 넣어보세요.</p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            내가 <span class="color-txt">원하는 모든 기능</span>을 추가!
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-minihome04.png" alt="" class="img img-minihome04">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용 -->
+
+                <!-- 내용 하단 버튼 -->
+                <div class="contt-btn-wrapper">
+                  <button type="button" onclick="goStep('benefit-contt')" class="solid-btn square-btn btn">다음단계
+                    보기</button>
+                </div>
+                <!-- END 내용 하단 버튼 -->
+              </div>
+            </div>
+
+            <!-- 2. 멤버스 혜택받기 컨텐츠 -->
+            <div id="benefit-contt" class="modal-sidebar-contt">
+              <div class="modal-contt">
+                <!-- 내용 -->
+                <div class="contt-wrapper">
+                  <div class="top-wrap">
+                    <h2 class="top-ttl">
+                      나에게 필요한 혜택은 어떤 걸까요? <br>
+                      <b>살펴보고 신청해봐요!</b>
+                    </h2>
+
+                    <figure class="top-figure-wrap benefit-figure-wrap">
+                      <div class="list-grp">
+                        <div class="only-item">
+                          <img src="assets/images/img-only-item01.png" alt="only 더콕 멤버스만">
+                        </div>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-benefit01.png" alt="" class="img">
+                          <span class="badge-btn red">더콕 구매하기</span>
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-benefit02.png" alt="" class="img">
+                          <span class="badge-btn green">더콕 판매하기</span>
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-benefit03.png" alt="" class="img">
+                          <span class="badge-btn ylw">내상품 판매하기</span>
+                        </article>
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div class="bottom-wrap">
+                    <div class="inner-menu-wrapper">
+                      <div class="inner-menu-grp">
+                        <img src="assets/images/img-only-item02-thekoc.gif" alt="" class="only-item">
+                        <button type="button" data-inner-contt="buy-inner-contt"
+                          class="inner-menu-btn badge-btn red active">더콕 구매하기</button>
+                        <button type="button" data-inner-contt="sell-inner-contt"
+                          class="inner-menu-btn badge-btn green">더콕 판매하기</button>
+                        <button type="button" data-inner-contt="myproduct-inner-contt"
+                          class="inner-menu-btn badge-btn ylw">내상품 판매하기</button>
+                      </div>
+                    </div>
+
+                    <div class="inner-menu-contt-wrapper">
+                      <!-- 더콕 구매하기 컨텐츠 -->
+                      <div id="buy-inner-contt" class="inner-menu-contt active">
+                        <div class="section">
+                          <h3 class="subject-ttl">
+                            <b>공급가</b>만큼 저렴한 가격으로 구매하기
+                          </h3>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">ONLY 더콕 멤버스만!</span>
+                                </h4>
+                                <p class="desc">더콕 멤버스가 되면 멤버쉽 가격으로 상품을 구매할 수 있어요. <br>
+                                  공급가만큼 저렴한 더콕 멤버쉽 가격을 만나보세요.</p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">공급가</span>로 접근해 <span class="color-txt">최고의 딜</span>을 경험하세요!
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-benefit01-01.png" alt="" class="img img-benefit01-01">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">더콕 링크로 바로 구매해요.</span>
+                                </h4>
+                                <p class="desc">링크 발급을 통해 URL을 복사한 후 내가 구매해요.</p>
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-benefit01-02.png" alt="" class="img img-benefit01-02">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">멤버스 페이지에서 구매해요.</span>
+                                </h4>
+                                <p class="desc">멤버스 페이지를 통해 나도 구매하고 <br>
+                                  추천하고 싶은 사람들에게 판매도 하고 </p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">좋은 것</span>은 널리 공유해요~
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-benefit01-03.png" alt="" class="img img-benefit01-03">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 더콕 핀매하기 컨텐츠 -->
+                      <div id="sell-inner-contt" class="inner-menu-contt">
+                        <div class="section">
+                          <h3 class="subject-ttl">
+                            <b>엄선된 더콕 상품</b> 판매하기
+                          </h3>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">명품부터 인기상품까지 골라요.</span>
+                                </h4>
+                                <p class="desc">평소에 판매하고 싶던 상품 모두 콕콕 골라요 <br>
+                                  가격 조정하고 판매링크 생성하면 끝!</p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">판매하고 싶은 상품</span>을 모두 골라요!
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-benefit02-01.png" alt="" class="img img-benefit02-01">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">마음대로 가격을 조정해요.</span>
+                                </h4>
+                                <p class="desc">내가 콕 선택한 상품의 판매 가격을 <br>
+                                  위,아래로 조정해보세요</p>
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-benefit02-02.png" alt="" class="img img-benefit02-02">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">더콕 링크를 바로 공유해요.</span>
+                                </h4>
+                                <p class="desc">인스타그램, 페이스북, 틱톡, 블로그, 웨이보, <br>
+                                  카카오 오픈채팅까지 공유하고 싶은 곳 어디에나 공유해요.</p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  시중에 없는 <span class="color-txt">특별한 가격</span>을 공유해보세요
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-benefit02-03.png" alt="" class="img img-benefit02-03">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 내상품 판매하기 컨텐츠 -->
+                      <div id="myproduct-inner-contt" class="inner-menu-contt">
+                        <div class="section">
+                          <h3 class="subject-ttl">
+                            <b>내 상품 직접 </b> 판매하기
+                          </h3>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">내 상품을 준비해요.</span>
+                                </h4>
+                                <p class="desc">멤버스 페이지 탭 추가>상품탭>내상품에서 <br>
+                                  판매하고 싶은 상품을 업로드해요.</p>
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-benefit03-01.png" alt="" class="img img-benefit03-01">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">가격 네고가 가능해요.</span>
+                                </h4>
+                                <p class="desc">판매가 네고가 가능한 상품은 “거래 제안하기＂를 <br>
+                                  선택해주세요. 구매자가 가격을 제안할 수 있어요.</p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  거래가 들어왔을때, <span class="color-txt">수락 버튼</span>을 꼭 눌러주세요!
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-benefit03-02.png" alt="" class="img img-benefit03-02">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">배송 방법을 선택하세요!</span>
+                                </h4>
+                                <p class="desc">배송 또는 직접수령을 통해 배송 방법을 선택할 수 있어요.</p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">“저장하기”</span> 버튼을 <span class="color-txt">꼭</span> 눌러주세요!
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-benefit03-03.png" alt="" class="img img-benefit03-03">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용 -->
+
+                <!-- 내용 하단 버튼 -->
+                <div class="contt-btn-wrapper">
+                  <button type="button" onclick="goStep('minihome-contt')" class="bd-btn square-btn btn">이전단계
+                    보기</button>
+                  <button type="button" onclick="goStep('social-contt')" class="solid-btn square-btn btn">다음단계
+                    보기</button>
+                </div>
+                <!-- END 내용 하단 버튼 -->
+              </div>
+            </div>
+
+            <!-- 3. 소셜셀링 신청하기 컨텐츠 -->
+            <div id="social-contt" class="modal-sidebar-contt ">
+              <div class="modal-contt">
+                <!-- 내용 -->
+                <div class="contt-wrapper">
+                  <div class="top-wrap">
+                    <h2 class="top-ttl">
+                      <b>소셜셀링 신청</b>과 <br>
+                      <b>콘텐츠 작성</b>은 어떻게 하는 걸까요?
+                    </h2>
+
+                    <figure class="top-figure-wrap social-figure-wrap">
+                      <div class="list-grp">
+                        <article class="list">
+                          <div class="social-card">
+                            <img src="assets/images/img-top-figure-social01.png" alt="" class="img">
+                            <div class="caption">
+                              <img src="assets/images/ico-naver.svg" alt="">
+                              <span class="txt">아디다스 Y3 할인가 구매하는 방법 더콕</span>
+                            </div>
+                          </div>
+                        </article>
+                        <article class="list">
+                          <div class="social-card">
+                            <img src="assets/images/img-top-figure-social02.png" alt="" class="img">
+                            <div class="caption">
+                              <img src="assets/images/ico-insta.svg" alt="">
+                              <span class="txt">#광고 #더콕구매꿀팁! 투명하면서도 촉촉한 제형으로 </span>
+                            </div>
+                          </div>
+                        </article>
+                        <article class="list">
+                          <div class="social-card">
+                            <img src="assets/images/img-top-figure-social03.png" alt="" class="img">
+                            <div class="caption">
+                              <img src="assets/images/ico-youtube.svg" alt="">
+                              <span class="txt">Y-3 운동화를 콕! FASHION! Y-3 운동화를 콕! THEKOC</span>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div class="bottom-wrap">
+                    <div class="inner-menu-wrapper">
+                      <div class="inner-menu-grp">
+                        <img src="assets/images/img-only-item02-thekoc.gif" alt="" class="only-item">
+                        <button type="button" data-inner-contt="blog-inner-contt"
+                          class="inner-menu-btn social-badge-btn naver active">
+                          <img src="assets/images/ico-naver.svg" alt="">
+                          <span class="txt">블로그</span>
+                        </button>
+                        <button type="button" data-inner-contt="youtube-inner-contt"
+                          class="inner-menu-btn social-badge-btn youtube ">
+                          <img src="assets/images/ico-youtube.svg" alt="">
+                          <span class="txt">유튜브</span>
+                        </button>
+                        <button type="button" data-inner-contt="tiktok-inner-contt"
+                          class="inner-menu-btn social-badge-btn tiktok ">
+                          <img src="assets/images/ico-tiktok.svg" alt="">
+                          <span class="txt">틱톡</span>
+                        </button>
+                        <button type="button" data-inner-contt="insta-inner-contt"
+                          class="inner-menu-btn social-badge-btn insta ">
+                          <img src="assets/images/ico-insta.svg" alt="">
+                          <span class="txt">인스타그램</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="inner-menu-contt-wrapper">
+                      <!-- 블로그 소셜셀링 컨텐츠 -->
+                      <div id="blog-inner-contt" class="inner-menu-contt active">
+                        <div class="section">
+                          <h3 class="subject-ttl">
+                            <b>블로그 소셜셀링</b> 신청하기
+                          </h3>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링에 KOC로 선정 되었어요!</span>
+                                </h4>
+                                <p class="desc">
+                                  소셜셀링의 KOC로 선정되었어요! <br>
+                                  선정된 소셜셀링의 상세페이지에서 체험 내용, 기간, 콘텐츠 등록 기간을 <br>
+                                  확인하여 일정을 놓치지 않도록 유의해주세요.
+                                </p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">선정된 KOC</span>에게
+                                  <span class="color-txt">개별 안내</span> 드려요
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-blog01.png" alt="" class="img img-social-blog01">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">선정된 소셜셀링을 체험해주세요.</span>
+                                </h4>
+                                <p class="desc">캠페인에 참여하여 제품을 체험하고, <br>나만의 스타일로 멋진 사진과 영상을 공유해보세요!</p>
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-blog02.png" alt="" class="img img-social-blog02">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링 콘텐츠를 등록해주세요.</span>
+                                </h4>
+                                <p class="desc">캠페인에서 안내된 내용에 따라 <br>
+                                  캠페인 미션과 제목 키워드, 본문 키워드, 스폰서 배너를 <br>
+                                  반드시 확인해 주세요. <br><br>
+
+                                  포스팅 마지막엔 반드시 스폰서 배너를 넣어주셔야 하며, <br>
+                                  이미지로 넣거나, 스폰서 배너가 없는 경우 콘텐츠 등록이 <br>
+                                  되지 않아요!</p>
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-blog03.png" alt="" class="img img-social-blog03">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링 상품 링크를 동시에 게재해주세요.</span>
+                                </h4>
+                                <p class="desc">참여한 소셜셀링 상품의 링크를 블로그 콘텐츠에 <br>
+                                  함께 등록해주세요. <br>
+                                  상품 판매시, 판매 수익은 나에게 적립됩니다. </p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">추가 수익</span>은 <span class="color-txt">링크</span>에서 나오니 잊지 말아요!
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-blog04.png" alt="" class="img img-social-blog04">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 유튜브 소셜셀링 컨텐츠 -->
+                      <div id="youtube-inner-contt" class="inner-menu-contt">
+                        <div class="section">
+                          <h3 class="subject-ttl">
+                            <b>유튜브 소셜셀링</b> 신청하기
+                          </h3>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링에 KOC로 선정 되었어요!</span>
+                                </h4>
+                                <p class="desc">
+                                  소셜셀링의 KOC로 선정되었어요! <br>
+                                  선정된 소셜셀링의 상세페이지에서 체험 내용, 기간, 콘텐츠 등록 기간을 <br>
+                                  확인하여 일정을 놓치지 않도록 유의해주세요.
+                                </p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">선정된 KOC</span>에게
+                                  <span class="color-txt">개별 안내</span> 드려요
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-youtube01.png" alt="" class="img img-social-youtube01">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">선정된 소셜셀링을 체험해주세요.</span>
+                                </h4>
+                                <p class="desc">배송형 소셜셀링이라면 상품이 배송된 후, 상품을 체험해 주세요. <br>
+                                  꼼꼼한 사진과 함께 영상까지 추가된다면 최고!</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링 콘텐츠를 등록해주세요.</span>
+                                </h4>
+                                <p class="desc">유튜브 영상을 등록하기 전에 <br>
+                                  캠페인에서 안내된 내용에 따라 캠페인 미션과 <br>
+                                  키워드, 링크, 태그, 유료 광고 라벨을 준수하여 등록해 주세요.</p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">유료 광고 포함 표기!</span> 챙겨주세요.
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-youtube02.png" alt="" class="img img-social-youtube02">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링 상품 링크를 동시에 게재해주세요.</span>
+                                </h4>
+                                <p class="desc">참여한 소셜셀링 상품의 링크를 유튜브 내용에 <br>
+                                  함께 등록해주세요. <br>
+                                  상품 판매시, 판매 수익은 나에게 적립됩니다. </p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">추가 수익</span>은 <span class="color-txt">링크</span>에서 나오니 잊지 말아요!
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-youtube03.png" alt="" class="img img-social-youtube03">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 틱톡 소셜셀링 컨텐츠 -->
+                      <div id="tiktok-inner-contt" class="inner-menu-contt">
+                        <div class="section">
+                          <h3 class="subject-ttl">
+                            <b>틱톡 소셜셀링</b> 신청하기
+                          </h3>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링에 KOC로 선정 되었어요!</span>
+                                </h4>
+                                <p class="desc">
+                                  소셜셀링의 KOC로 선정되었어요! <br>
+                                  선정된 소셜셀링의 상세페이지에서 체험 내용, 기간, 콘텐츠 등록 기간을 <br>
+                                  확인하여 일정을 놓치지 않도록 유의해주세요.
+                                </p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">선정된 KOC</span>에게
+                                  <span class="color-txt">개별 안내</span> 드려요
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-tiktok01.png" alt="" class="img img-social-tiktok01">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">선정된 소셜셀링을 체험해주세요.</span>
+                                </h4>
+                                <p class="desc">배송형 소셜셀링이라면 상품이 배송된 후, 상품을 체험해 주세요. <br>
+                                  꼼꼼한 사진과 함께 영상까지 추가된다면 최고!</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링 콘텐츠를 등록해주세요.</span>
+                                </h4>
+                                <p class="desc">틱톡 피드를 등록하기 전에 <br>
+                                  캠페인에서 안내된 내용에 따라 캠페인 미션과 해시태그, 이미지 개수를 <br>
+                                  확인해 주세요. <br><br>
+                                  피드 본문 최상단에 반드시 #협찬 또는 #유료광고 해시태그가 포함되어야 해요. <br>
+                                  #협찬 또는 #유료광고 해시태그를 넣지 않거나 내용 중간에 포함될 경우엔 <br>
+                                  콘텐츠 등록이 되지 않아요!</p>
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-tiktok02.png" alt="" class="img img-social-tiktok02">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링 상품 링크를 동시에 게재해주세요.</span>
+                                </h4>
+                                <p class="desc">참여한 소셜셀링 상품의 링크를 틱톡 컨텐츠에 <br>
+                                  함께 등록해주세요. <br>
+                                  상품 판매시, 판매 수익은 나에게 적립됩니다. </p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">추가 수익</span>은 <span class="color-txt">링크</span>에서 나오니 잊지 말아요!
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 인스타그램 소셜셀링 컨텐츠 -->
+                      <div id="insta-inner-contt" class="inner-menu-contt">
+                        <div class="section">
+                          <h3 class="subject-ttl">
+                            <b>인스타그램 소셜셀링</b> 신청하기
+                          </h3>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링에 KOC로 선정 되었어요!</span>
+                                </h4>
+                                <p class="desc">
+                                  소셜셀링의 KOC로 선정되었어요! <br>
+                                  선정된 소셜셀링의 상세페이지에서 체험 내용, 기간, 콘텐츠 등록 기간을 <br>
+                                  확인하여 일정을 놓치지 않도록 유의해주세요.
+                                </p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">선정된 KOC</span>에게
+                                  <span class="color-txt">개별 안내</span> 드려요
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-insta01.png" alt="" class="img img-social-insta01">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">선정된 소셜셀링을 체험해주세요.</span>
+                                </h4>
+                                <p class="desc">배송형 소셜셀링이라면 상품이 배송된 후, 상품을 체험해 주세요. <br>
+                                  꼼꼼한 사진과 함께 영상까지 추가된다면 최고!</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링 콘텐츠를 등록해주세요.</span>
+                                </h4>
+                                <p class="desc">인스타그램 피드를 등록하기 전에 <br>
+                                  캠페인에서 안내된 내용에 따라 캠페인 미션과 해시태그, 이미지 개수를 <br>
+                                  확인해 주세요. <br><br>
+                                  피드 본문 최상단에 반드시 #협찬 또는 #유료광고 해시태그가 포함되어야 해요. <br>
+                                  #협찬 또는 #유료광고 해시태그를 넣지 않거나 내용 중간에 포함될 경우엔 <br>
+                                  콘텐츠 등록이 되지 않아요!</p>
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-insta02.png" alt="" class="img img-social-insta02">
+                            </div>
+                          </div>
+
+                          <div class="section-wrapper">
+                            <div class="description-container">
+                              <span class="dot"></span>
+
+                              <div class="description-wrap">
+                                <h4 class="ttl">
+                                  <span class="txt">소셜셀링 상품 링크를 동시에 게재해주세요.</span>
+                                </h4>
+                                <p class="desc">참여한 소셜셀링 상품의 링크를 인스타그램 프로필에<br>
+                                  함께 등록해주세요. <br>
+                                  상품 판매시, 판매 수익은 나에게 적립됩니다. </p>
+                              </div>
+
+                              <div class="character-wrap">
+                                <div class="bubble">
+                                  <span class="color-txt">추가 수익</span>은 <span class="color-txt">링크</span>에서 나오니 잊지 말아요!
+                                </div>
+                                <img src="assets/images/character02.gif" alt="" class="character">
+                              </div>
+                            </div>
+
+                            <div class="picture-container">
+                              <img src="assets/images/img-social-insta03.png" alt="" class="img img-social-insta03">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용 -->
+
+                <!-- 내용 하단 버튼 -->
+                <div class="contt-btn-wrapper">
+                  <button type="button" onclick="goStep('benefit-contt')" class="bd-btn square-btn btn">이전단계 보기</button>
+                  <button type="button" onclick="goStep('event-contt')" class="solid-btn square-btn btn">다음단계
+                    보기</button>
+                </div>
+                <!-- END 내용 하단 버튼 -->
+              </div>
+            </div>
+
+            <!-- 4. 이벤트 참여하기 컨텐츠 -->
+            <div id="event-contt" class="modal-sidebar-contt">
+              <div class="modal-contt">
+                <!-- 내용 -->
+                <div class="contt-wrapper">
+                  <div class="final-top-wrap">
+                    <figure class="top-figure-wrap">
+                      <video id="video02" src="assets/images/video02.mp4" loop muted playsinline data-keeping></video>
+                    </figure>
+
+                    <div class="top-ttl-wrap">
+                      <h2 class="top-ttl">더콕 사용백서 확인 완료!</h2>
+                      <p class="desc">
+                        모든 과정을 마치셨다면, 이제 이벤트에 도전하세요! <br>당신을 위한 선물이 추첨을 기다리고 있어요! ☺
+                      </p>
+                      <a href="https://thekoc.io/saleTeam/saleTeamList?categoryCode=5" target="_blank"
+                        class="bd-btn square-btn btn">이벤트 참여하기</a>
+                    </div>
+                  </div>
+
+                  <div class="final-bottom-wrap">
+                    <div class="section">
+                      <h2 class="top-ttl">
+                        <b>커뮤니티 참여</b>하고<br>
+                        <b>다른 KOC</b>들과 소통해요!
+                      </h2>
+
+                      <div class="figure-wrap">
+                        <img src="assets/images/img-event01.png" alt="" class="img img-event01">
+                      </div>
+                    </div>
+
+                    <div class="section-wrapper">
+                      <div class="description-container">
+                        <div class="description-wrap">
+                          <h4 class="ttl">소통의 시작은 여기서부터!</h4>
+                          <p class="desc">더콕 커뮤니티에서 다른 회원들과 경험을 공유하고, <br>일상의 즐거움을 나누세요.</p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            <span class="color-txt">커뮤니티에 일상을 공유하러 가볼까요?</span>
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-event02.png" alt="" class="img img-event02">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용 -->
+
+                <!-- 내용 하단 버튼 -->
+                <div class="contt-btn-wrapper">
+                  <button type="button" class="solid-btn square-btn btn">커뮤니티 참여하러 가기</button>
+                  <button type="button" onclick="closeModal('thekoc-guide-modal')"
+                    class="bd-btn square-btn btn">완료</button>
+                </div>
+                <!-- END 내용 하단 버튼 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="thekoc-store-guide-modal" class="modal-wrapper">
+      <div class="custom-modal-container">
+        <div class="custom-modal store-guide-modal">
+          <div class="modal-sidebar">
+            <div class="top-ttl-wrap">
+              <h2 class="ttl">신규 입점사를 위한 <br><span class="color-txt">더콕 사용백서</span></h2>
+              <img src="assets/images/character03.gif" alt="">
+            </div>
+
+            <div class="bottom-menu-wrap">
+              <ul class="menu-list-grp">
+                <!-- 입점기업 신청하기 -->
+                <li data-contt="store-apply-contt" onclick="goStep('store-apply-contt')" class="menu-list active">
+                  <div class="menu-list-txt">
+                    <img src="assets/images/ico-smile.svg" alt="" class="ico-smile">
+                    <span class="num">1</span>
+                    <span class="txt">입점 신청하기 - 기업</span>
+                  </div>
+                </li>
+                <!-- 입점 승인받기 -->
+                <li data-contt="store-approve-contt" onclick="goStep('store-approve-contt')" class="menu-list">
+                  <div class="menu-list-txt">
+                    <img src="assets/images/ico-smile.svg" alt="" class="ico-smile">
+                    <span class="num">2</span>
+                    <span class="txt">입점 승인받기</span>
+                  </div>
+                </li>
+                <!-- 상품 등록하기 -->
+                <li data-contt="store-enroll-contt" onclick="goStep('store-enroll-contt')" class="menu-list">
+                  <div class="menu-list-txt">
+                    <img src="assets/images/ico-smile.svg" alt="" class="ico-smile">
+                    <span class="num">3</span>
+                    <span class="txt">상품 등록하기</span>
+                  </div>
+                  <ul class="sub-menu-list-grp">
+                    <li class="sub-menu-list">API 자동 등록</li>
+                    <li class="sub-menu-list">업로드 등록</li>
+                  </ul>
+                </li>
+                <!-- 브랜드 미니홈피 -->
+                <li data-contt="store-minihome-contt" onclick="goStep('store-minihome-contt')" class="menu-list">
+                  <div class="menu-list-txt">
+                    <img src="assets/images/ico-smile.svg" alt="" class="ico-smile">
+                    <span class="num">4</span>
+                    <span class="txt">브랜드 미니홈피</span>
+                  </div>
+                </li>
+                <!-- 5개국 11만 KOC들의 C2C -->
+                <li data-contt="store-global-contt" onclick="goStep('store-global-contt')" class="menu-list">
+                  <div class="menu-list-txt">
+                    <img src="assets/images/ico-smile.svg" alt="" class="ico-smile">
+                    <span class="num">5</span>
+                    <span class="txt">5개국 11만 KOC들의 C2C</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-sidebar-contt-container">
+            <!-- 1. 입점기업 신청하기 컨텐츠 -->
+            <div id="store-apply-contt" class="modal-sidebar-contt active">
+              <div class="modal-contt">
+                <!-- 내용 -->
+                <div class="contt-wrapper">
+                  <div class="top-wrap">
+                    <h2 class="top-ttl">
+                      <b>입점 기업 신청</b>을 <br>순서대로 함께 완성해봐요!
+                    </h2>
+
+                    <figure class="top-figure-wrap store-apply-figure-wrap">
+                      <div class="list-grp">
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-sapply01.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-sapply02.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-sapply03.png" alt="">
+                        </article>
+                      </div>
+
+                      <div class="white-box">
+                        <p class="white-box-txt sm-txt">
+                          <span class="accent-txt">
+                            <u>5개국 11만 KOC</u>
+                          </span>들이, 상품
+                        </p>
+                        <p class="white-box-txt color-txt">구매와 판매를 전세계로!</p>
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div class="bottom-wrap">
+                    <!-- 1-1. 사업자 정보를 입력해볼까요? -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num black">1</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">사업자 정보를 입력해볼까요?</span>
+                          </h4>
+                          <p class="desc">
+                            상호에 제조사는 브랜드명을, <br>유통사는 상점명을 등록해보세요.
+                          </p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            <span class="color-txt">사업자 등록증</span>과&nbsp;<span class="color-txt">통장사본</span> 파일 업로드를
+                            잊지마세요!
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-sapply01.png" alt="" class="img img-sapply01">
+                      </div>
+                    </div>
+
+                    <!-- 1-2. 이용약관을 확인하시고 입점신청 버튼만 누르면 끝! -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num black">2</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">이용약관을 확인하시고 입점신청 버튼만 누르면 끝!</span>
+                          </h4>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            마지막에 <span class="color-txt">입점신청 버튼</span>을 누르는걸 잊지마세요!
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-sapply02.png" alt="" class="img img-sapply02">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용 -->
+
+                <!-- 내용 하단 버튼 -->
+                <div class="contt-btn-wrapper">
+                  <button type="button" onclick="goStep('store-approve-contt')" class="solid-btn square-btn btn">
+                    입점 승인받기
+                  </button>
+                </div>
+                <!-- END 내용 하단 버튼 -->
+              </div>
+            </div>
+
+            <!-- 2. 입점 승인받기 컨텐츠 -->
+            <div id="store-approve-contt" class="modal-sidebar-contt">
+              <div class="modal-contt">
+                <!-- 내용 -->
+                <div class="contt-wrapper">
+                  <div class="top-wrap">
+                    <h2 class="top-ttl">
+                      <b>입점 기업 신청</b>을 <br>3분 내로 완성해봐요!
+                    </h2>
+
+                    <figure class="top-figure-wrap logos-figure-wrap">
+                      <div class="list-grp">
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos01.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos02.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos03.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos04.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos05.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos06.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos07.png" alt="">
+                        </article>
+                        <!-- logo line -->
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos08.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos09.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos10.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos11.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos12.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos13.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos14.png" alt="">
+                        </article>
+                        <!-- logo line -->
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos15.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos16.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos17.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos18.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos19.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos20.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-logos21.png" alt="">
+                        </article>
+                        <!-- logo line -->
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div class="bottom-wrap">
+                    <!-- 2-1. 입점 승인을 잠시 기다려주세요 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num black">1</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">입점 승인을 잠시 기다려주세요.</span>
+                          </h4>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            <span class="color-txt">입점 승인</span>을 조금만 기다려주세요! 금방 승인해드릴게요!
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-sapprove01.png" alt="" class="img img-sapprove01">
+                      </div>
+                    </div>
+
+                    <!-- 2-2. 영업일기준 안내 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num black">2</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">
+                              입점 승인시 영업일 기준 2-3일 내에 <br>승인 메세지와 함께 미니홈피를 받습니다.
+                            </span>
+                          </h4>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            미니홈피를 통해 <span class="color-txt">주문 알림과 송장정보</span>를 기입할 수 있습니다.
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-sapprove02.png" alt="" class="img img-sapprove02">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용 -->
+
+                <!-- 내용 하단 버튼 -->
+                <div class="contt-btn-wrapper">
+                  <button type="button" onclick="goStep('store-apply-contt')" class="bd-btn square-btn btn">
+                    입점기업 신청하기</button>
+                  <button type="button" onclick="goStep('store-enroll-contt')" class="solid-btn square-btn btn">
+                    상품 등록하기</button>
+                </div>
+                <!-- END 내용 하단 버튼 -->
+              </div>
+            </div>
+
+            <!-- 3. 상품 등록하기 컨텐츠 -->
+            <div id="store-enroll-contt" class="modal-sidebar-contt ">
+              <div class="modal-contt">
+                <!-- 내용 -->
+                <div class="contt-wrapper">
+                  <div class="top-wrap">
+                    <h2 class="top-ttl">
+                      <b>입점 기업 신청</b>은 <br>
+                      <b>2가지 상품등록 방법</b>이 가능해요!
+                    </h2>
+
+                    <figure class="top-figure-wrap store-enroll-figure-wrap">
+                      <div class="list-grp">
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-senroll01.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-senroll02.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-senroll03.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-senroll04.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-top-figure-senroll05.png" alt="">
+                        </article>
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div class="bottom-wrap">
+                    <!-- 3-1. API 자동 등록 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num black">1</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="sm-txt">CAFE24, 고도몰을 사용하여 상품수가 많다면, <br></span>
+                            <span class="txt">API 자동 등록을 해볼까요?</span>
+                          </h4>
+                          <p class="desc">CAFE24, NHN 고도몰을 사용중 이시라면 <br>
+                            단, 3분만에 API연동이 가능해요. <br>
+                            직접 제작한 쇼핑몰 이시라면 담당 BM님이 <br>
+                            개발팀과 논의하여 연동작업을 해주실거에요</p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            <span class="color-txt">직접 제작한 쇼핑몰 보유중</span>이시라면 담당 BM님께 말씀 주세요. <br>
+                            더콕 개발팀과 논의하여 도움 드릴거예요.
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-senroll01.png" alt="" class="img img-senroll01">
+                      </div>
+                    </div>
+
+                    <!-- 3-2. 업로드 등록  -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num black">2</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="sm-txt">상품수가 많지 않다면,</span>
+                            <span class="txt">업로드 등록을 해볼까요?</span>
+                          </h4>
+                          <p class="desc">
+                            개별 상품 등록과 엑셀을 통한 대량 업로드 <br>2가지 방식 모두 가능해요.
+                          </p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            담당 BM님과 <span class="color-txt">최선의 방법</span>을 논의해주세요.
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-senroll02.png" alt="" class="img img-senroll02">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용 -->
+
+                <!-- 내용 하단 버튼 -->
+                <div class="contt-btn-wrapper">
+                  <button type="button" onclick="goStep('store-approve-contt')" class="bd-btn square-btn btn">입점
+                    승인받기</button>
+                  <button type="button" onclick="goStep('store-minihome-contt')" class="solid-btn square-btn btn">브랜드
+                    미니홈피</button>
+                </div>
+                <!-- END 내용 하단 버튼 -->
+              </div>
+            </div>
+
+            <!-- 4. 브랜드 미니홈피 컨텐츠 -->
+            <div id="store-minihome-contt" class="modal-sidebar-contt ">
+              <div class="modal-contt">
+                <!-- 내용 -->
+                <div class="contt-wrapper">
+                  <div class="top-wrap">
+                    <h2 class="top-ttl">
+                      <b>전세계 KOC들</b>에게 <br>
+                      브랜드를 홍보하세요!
+                    </h2>
+
+                    <figure class="top-figure-wrap">
+                      <video class="video03" src="assets/images/video03.mp4" loop muted playsinline data-keeping></video>
+                    </figure>
+                  </div>
+
+                  <div class="bottom-wrap">
+                    <!-- 4-1. 브랜드 프로필 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num red">1</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">브랜드 프로필을 변경해볼까요?</span>
+                          </h4>
+                          <p class="desc">
+                            프로필 수정 버튼을 누르고 <br>이미지와 브랜드 SNS채널연동을 해보세요
+                          </p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            <span class="color-txt">브랜드 대표이미지</span>와 SNS를 연동해주세요
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-sminihome01.png" alt="" class="img img-sminihome01">
+                      </div>
+                    </div>
+
+                    <!-- 4-2. 유튜브, 이미지, 이벤트 정보 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num mint">2</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">유튜브, 이미지, 이벤트 정보를 넣어볼까요?</span>
+                          </h4>
+                          <p class="desc">
+                            미니홈피에서 탭추가 버튼을 누른 후 <br>동영상, 이미지, 일정탭을 추가해 주세요
+                          </p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            <span class="color-txt">전세계 KOC들</span>에게 홍보됩니다.
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-sminihome02.png" alt="" class="img img-sminihome02">
+                      </div>
+                    </div>
+
+                    <!-- 주문 관리가 가능합니다. -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num black">3</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">주문 관리가 가능합니다.</span>
+                          </h4>
+                          <p class="desc">상품이 판매되면, <br>주문판매 알림과 이메일이 발송됩니다.<br>
+                            브랜드 미니홈피 > 우측 톱니바퀴 > 판매관리 > 통합주문의 <br>판매된 상품에 송장번호를 기입해주세요.</p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            <span class="color-txt">송장번호</span>를 꼭 기입해주세요.
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-sminihome03.png" alt="" class="img img-sminihome03">
+                      </div>
+                    </div>
+
+                    <!-- 4-3. 멤버쉽 QR을 활용해서 충성KOC도 만들어보세요 -->
+                    <div class="section-wrapper">
+                      <div class="description-container type-num">
+                        <span class="num black">3</span>
+
+                        <div class="description-wrap">
+                          <h4 class="ttl">
+                            <span class="txt">멤버쉽 QR을 활용해서 충성 KOC도 만들어보세요</span>
+                          </h4>
+                          <p class="desc">멤버쉽 가입용 QR코드를 생성해서 <br>
+                            충성 KOC를 만들어주세요 </p>
+                        </div>
+
+                        <div class="character-wrap">
+                          <div class="bubble">
+                            <span class="color-txt">전세계 KOC들</span>에게 홍보됩니다.
+                          </div>
+                          <img src="assets/images/character02.gif" alt="" class="character">
+                        </div>
+                      </div>
+
+                      <div class="picture-container">
+                        <img src="assets/images/img-sminihome04.png" alt="" class="img img-sminihome04">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용 -->
+
+                <!-- 내용 하단 버튼 -->
+                <div class="contt-btn-wrapper">
+                  <button type="button" onclick="goStep('store-enroll-contt')" class="bd-btn square-btn btn">상품
+                    등록하기</button>
+                  <button type="button" onclick="goStep('store-global-contt')" class="solid-btn square-btn btn">11만 5개국
+                    셀러 C2C 판매</button>
+                </div>
+                <!-- END 내용 하단 버튼 -->
+              </div>
+            </div>
+
+            <!-- 5. 11만 5개국 셀러 C2C 판매 컨텐츠 -->
+            <div id="store-global-contt" class="modal-sidebar-contt">
+              <div class="modal-contt">
+                <!-- 내용 -->
+                <div class="contt-wrapper">
+                  <div class="top-wrap">
+                    <h2 class="top-ttl">
+                      <b>5개국 11만 KOC들</b>이 <br>함께 만들어가는 C2C포털, 더콕
+                    </h2>
+
+                    <figure class="top-figure-wrap store-global-figure-wrap">
+                      <div class="list-grp">
+                        <article class="list">
+                          <img src="assets/images/img-influencer01.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-influencer02.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-influencer03.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-influencer04.png" alt="">
+                        </article>
+                        <article class="list">
+                          <img src="assets/images/img-influencer05.png" alt="">
+                        </article>
+                      </div>
+
+                      <div class="white-box">
+                        <p class="white-box-txt sm-txt">
+                          <span class="accent-txt">
+                            <u>5개국 11만 KOC</u>
+                          </span>들이, 상품
+                        </p>
+                        <p class="white-box-txt color-txt">구매와 판매를 전세계로!</p>
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div class="bottom-wrap">
+                    <div class="sglobal-promotion-container">
+                      <div class="ttl-wrap">
+                        <img src="assets/images/img-sub-ttl-sglobal.png" alt="what is THEKOC">
+                        <img src="assets/images/img-ttl-sglobal.png" alt="전세계 모든 상품을 더콕">
+                      </div>
+
+                      <div class="content01-wrap">
+                        <div class="content-grid">
+                          <figure class="ico-box">
+                            <img src="assets/images/img-icon-shop01.svg" alt="">
+                          </figure>
+                          <h3 class="sm-ttl">해외 브랜드 49,000개 이상</h3>
+                          <p class="sm-desc">검증되고 안전한 상품만을 제공합니다. <br>
+                            국내 미입고, 기획, 라이선스 콜라보 상품 등 <br>
+                            국내 매진의 한정 상품이 있습니다.</p>
+                        </div>
+                        <div class="content-grid">
+                          <figure class="ico-box">
+                            <img src="assets/images/img-icon-shop02.svg" alt="">
+                          </figure>
+                          <h3 class="sm-ttl">최적의 가격으로 현명한 쇼핑</h3>
+                          <p class="sm-desc">국내외 상품 제조 및 브랜드사 직거래로 <br>
+                            높은 품질, 합리적인 가격의 <br>
+                            현명한 쇼핑이 가능합니다.</p>
+                        </div>
+                      </div>
+                      <div class="content02-wrap">
+                        <div class="content-grid">
+                          <span class="num-box">1</span>
+                          <h3 class="sm-ttl">전세계 상품 <br>
+                            멤버쉽가로 현명한 쇼핑</h3>
+                          <p class="sm-desc">멤버쉽 혜택이 적용된 <br>
+                            더 낮은 가격으로 구매해보세요</p>
+                          <a class="btn bd-btn"
+                            href="https://bizmessage.kakao.com/chat/-YtWK-Cry8L3Ziy52h7t4Qf8qH_smEtv_c_acLTkgmU/D_2Zg__8NfsuhRI1su6JQiVAxirFpxumSa0SjRmaDeA"
+                            target="_blank">
+                            멤버쉽 회원 문의
+                          </a>
+                        </div>
+
+                        <div class="content-grid">
+                          <span class="num-box">2</span>
+                          <h3 class="sm-ttl">셀러 상품 판매로 <br>
+                            수익 발생</h3>
+                          <p class="sm-desc">명품, 인기 상품을 <br>
+                            THEKOC 셀러가 되어 <br>
+                            판매할 수 있습니다.</p>
+                        </div>
+
+                        <div class="content-grid">
+                          <span class="num-box">3</span>
+                          <h3 class="sm-ttl">전세계 쇼퍼가 <br>
+                            쇼핑 지원</h3>
+                          <p class="sm-desc">THEKOC에서는, <br>
+                            글로벌 쇼퍼가 상품을 출품해 <br>
+                            현지에서 매입, 발송을 하고 있습니다.</p>
+                          <img src="assets/images/img-etc.png" alt="" class="img-etc">
+                        </div>
+
+                        <div class="content-grid">
+                          <span class="num-box">4</span>
+                          <h3 class="sm-ttl">안심/안전 결제 시스템</h3>
+                          <p class="sm-desc">결제 대금은 THEKOC이 중개합니다. <br>
+                            주문시에 결제한 대금은 상품이 도착하고 나서 <br>
+                            쇼퍼에게 지불되기 때문에 안심하셔도 됩니다.</p>
+                          <img src="assets/images/img-dosik.png" alt="" class="img-dosik">
+                          <span class="accent-txt">문제가 발생하면, THEKOC에서 환불 처리를 하겠습니다.</span>
+                        </div>
+
+                        <div class="content-grid">
+                          <span class="num-box">5</span>
+                          <h3 class="sm-ttl">선택 가능한 해외 결제 시스템</h3>
+                          <div class="logo-list-grp">
+                            <img src="assets/images/img-logo-pay01.png" alt="">
+                            <img src="assets/images/img-logo-pay02.png" alt="">
+                            <img src="assets/images/img-logo-pay03.png" alt="">
+                            <img src="assets/images/img-logo-pay04.png" alt="">
+                            <img src="assets/images/img-logo-pay05.png" alt="">
+                            <img src="assets/images/img-logo-pay06.png" alt="">
+                            <img src="assets/images/img-logo-pay07.png" alt="">
+                            <img src="assets/images/img-logo-pay08.png" alt="">
+                            <img src="assets/images/img-logo-pay09.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END 내용 -->
+
+                <!-- 내용 하단 버튼 -->
+                <div class="contt-btn-wrapper">
+                  <button type="button" onclick="goStep('store-minihome-contt')" class="solid-btn square-btn btn">브랜드
+                    미니홈피</button>
+                  <button type="button" onclick="closeModal('thekoc-store-guide-modal')"
+                    class="bd-btn square-btn btn">완료</button>
+                </div>
+                <!-- END 내용 하단 버튼 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-backdrop"></div>
+    <!-- END 팝업 세트 -->
+  </div>
+
+  <script src="assets/js/ui.js"></script>
+  <script>
+    $(document).mouseup(function (e) {
+      var layerPopup = $(".custom-modal-container");
+      if (layerPopup.has(e.target).length === 0) {
+        closeModal('thekoc-guide-modal');
+        closeModal('thekoc-store-guide-modal');
+      }
+    });
+  </script>
+</body>
+
+</html>

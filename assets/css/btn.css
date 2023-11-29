@@ -1,0 +1,123 @@
+.btn {
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn:active {
+  transition: all 0s;
+}
+
+.bd-btn {
+  border: 1px solid #F44336;
+  color: #F44336;
+  background-color: white;
+}
+
+.bd-btn .txt {
+  color: inherit;
+}
+
+.bd-btn:hover {
+  background-color: #ffdcda;
+}
+
+.bd-btn:active {
+  background-color: #ffccc9;
+}
+
+.solid-btn {
+  border: 1px solid #F44336;
+  background-color: #F44336;
+  color: white;
+}
+
+.solid-btn:hover {
+  background-color: #f43729;
+}
+
+.solid-btn:active {
+  background-color: #e72619;
+}
+
+.solid-btn .txt {
+  color: inherit;
+}
+
+.square-btn {
+  border-radius: 8px;
+}
+
+.badge-btn, .social-badge-btn {
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 0;
+  font-size: 12px;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background-color: white;
+  border: 1px solid #333;
+  color: #333;
+  cursor: pointer;
+}
+
+.badge-btn.red,
+.badge-btn.red.active {
+  background-color: #FFE5E1;
+  color: #FF5036;
+  border: 1px solid #FF5036;
+}
+
+.badge-btn.green,
+.badge-btn.green.active {
+  background-color: #DDFFF6;
+  color: #00B585;
+  border: 1px solid #00B585;
+}
+
+.badge-btn.ylw,
+.badge-btn.ylw.active {
+  background-color: #FFEDDF;
+  color: #FF8322;
+  border: 1px solid #FF8322;
+}
+
+.social-badge-btn {
+  padding: 0 21px;
+  gap: 5px;
+}
+
+.social-badge-btn .txt {
+  color: inherit;
+}
+
+.social-badge-btn.naver {
+  border-color: #22C31B;
+  color: #22C31B;
+}
+
+.social-badge-btn.youtube {
+  color: #FF2929;
+  border-color: #FF2929;
+}
+
+.social-btn.tiktok {
+  border-color: #404040;
+  color: #404040;
+}
+
+.social-badge-btn.insta {
+  border-color: #7E61BF;
+  color: #7E61BF;
+}
