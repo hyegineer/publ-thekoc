@@ -25,7 +25,10 @@
 
   /* 1126 신규 */
   .store-guide-modal .contt-btn-wrapper {
-    display: block;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
   }
 
   /* 1129 수정 */
@@ -482,6 +485,17 @@
   /* 1206 수정 */
   #store-scintro-contt .top-figure-wrap,
   #store-scapply-contt .top-figure-wrap {
+    padding: 0 15px;
+  }
+
+  .store-guide-modal .contt-btn-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .store-guide-modal .contt-btn-wrapper .btn {
+    max-width: none;
+    width: auto;
     padding: 0 15px;
   }
 }

@@ -2009,7 +2009,7 @@
                 <div class="contt-btn-wrapper">
                   <button type="button" onclick="goStep('store-scintro-contt')" class="bd-btn square-btn btn">
                     소셜셀링 소개</button>
-                  <button type="button" onclick="closeModal('thekoc-social-guide-modal')"
+                  <button type="button" onclick="closeModal('thekoc-social-modal')"
                     class="bd-btn square-btn btn">완료</button>
                 </div>
                 <!-- END 내용 하단 버튼 -->
@@ -2031,6 +2031,7 @@
       if (layerPopup.has(e.target).length === 0) {
         closeModal('thekoc-guide-modal');
         closeModal('thekoc-store-guide-modal');
+        closeModal('thekoc-social-modal');
       }
     });
   </script>
