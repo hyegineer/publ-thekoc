@@ -38,12 +38,12 @@ function goStep(contt) {
     }, 500);
   }
 
-  if (contt == 'store-minihome-contt') {
-    $('.video03').get(0).currentTime = 0;
-    setTimeout(function () {
-      $('.video03').get(0).play();
-    }, 500);
-  }
+  // if (contt == 'store-minihome-contt') {
+  //   $('.video03').get(0).currentTime = 0;
+  //   setTimeout(function () {
+  //     $('.video03').get(0).play();
+  //   }, 500);
+  // }
 
   if (contt == 'event-contt') {
     $('#video02').get(0).currentTime = 0;
@@ -88,4 +88,9 @@ function openGuidePopup(id) {
 function openStoreGuidePopup(id) {
   openModal(id);
   goStep('store-apply-contt');
+}
+
+function openSocialGuidePopup(id) {
+  openModal(id);
+  goStep('store-scintro-contt');
 }

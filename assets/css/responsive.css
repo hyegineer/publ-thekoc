@@ -63,8 +63,10 @@
   .content02-wrap .content-grid:nth-child(3) .sm-ttl {
     font-size: 18px;
   }
-  
-  .content02-wrap .content-grid:nth-child(1) .sm-desc, .content02-wrap .content-grid:nth-child(2) .sm-desc, .content02-wrap .content-grid:nth-child(3) .sm-desc {
+
+  .content02-wrap .content-grid:nth-child(1) .sm-desc,
+  .content02-wrap .content-grid:nth-child(2) .sm-desc,
+  .content02-wrap .content-grid:nth-child(3) .sm-desc {
     font-size: 16px;
   }
 }
@@ -353,13 +355,13 @@
   }
 
   .store-global-figure-wrap .list-grp {
-    gap: 9px;
+    /* gap: 9px; */
     flex-wrap: wrap;
-    max-width: 200px;
+    /* max-width: 200px; */
   }
 
   .store-global-figure-wrap .list-grp .list {
-    width: calc((100% - 18px) / 3);
+    width: calc((100% - 32px) / 5);
   }
 
   .global-list-grp {
@@ -470,9 +472,17 @@
   .content02-wrap .content-grid:nth-child(3) .sm-ttl {
     font-size: 16px;
   }
-  
-  .content02-wrap .content-grid:nth-child(1) .sm-desc, .content02-wrap .content-grid:nth-child(2) .sm-desc, .content02-wrap .content-grid:nth-child(3) .sm-desc {
+
+  .content02-wrap .content-grid:nth-child(1) .sm-desc,
+  .content02-wrap .content-grid:nth-child(2) .sm-desc,
+  .content02-wrap .content-grid:nth-child(3) .sm-desc {
     font-size: 13px;
+  }
+
+  /* 1206 수정 */
+  #store-scintro-contt .top-figure-wrap,
+  #store-scapply-contt .top-figure-wrap {
+    padding: 0 15px;
   }
 }
 

@@ -546,13 +546,16 @@
   margin: 0 auto;
   max-width: 740px;
   margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .store-global-figure-wrap .list-grp .list {
   opacity: 0;
+  width: calc((100% - 48px) / 7);
   animation: listShow 1s 1 forwards;
 }
-
+/* 
 .store-global-figure-wrap .list-grp .list:nth-child(2) {
   animation-delay: 0.3s;
 }
@@ -567,7 +570,7 @@
 
 .store-global-figure-wrap .list-grp .list:nth-child(5) {
   animation-delay: 0.75s;
-}
+} */
 
 .store-global-figure-wrap .white-box {
   animation-delay: 0.9s;

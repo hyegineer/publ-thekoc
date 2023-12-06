@@ -203,3 +203,29 @@
   max-width: 320px;
   margin-left: 10px;
 }
+
+#store-scintro-contt .description-container {
+  width: 100%;
+  max-width: 396px;
+}
+
+.picture-container .img-scintro01 {
+  max-width: 320px;
+}
+
+.picture-container .img-scintro02 {
+  max-width: 390px;
+}
+
+.picture-container .img-scintro03 {
+  max-width: 330px;
+}
+
+#store-scapply-contt .description-container {
+  width: 100%;
+  max-width: 396px;
+}
+
+.picture-container .img-scapply01 {
+  max-width: 230px;
+}
