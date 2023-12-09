@@ -50,6 +50,10 @@ function goStep(contt) {
     $('#video02').get(0).play();
   }
 
+  if (contt == 'store-scintro-contt') {
+    $('[data-contt="store-scapply-contt"]').addClass('active');
+  }
+
   $('.modal-wrapper').scrollTop(0);
 }
 
